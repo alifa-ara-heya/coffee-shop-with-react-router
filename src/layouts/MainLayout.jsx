@@ -1,12 +1,16 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Toaster } from 'react-hot-toast';
 
-const MainLayouts = () => {
+const MainLayout = () => {
     return (
         <div>
+            <Toaster />
             {/* Navbar */}
-            <Navbar></Navbar>
+            <div className="h-16">
+                <Navbar></Navbar>
+            </div>
             <div className="min-h-[calc(100vh-232px)] w-11/12 mx-auto">
                 {/* inspect tool- navbar height = 68px + footer height 164px = 232px */}
                 {/* Dynamic */}
@@ -24,4 +28,4 @@ const MainLayouts = () => {
     );
 };
 
-export default MainLayouts;
+export default MainLayout;

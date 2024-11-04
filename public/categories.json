@@ -1,17 +1,17 @@
 [
     {
       "id": 1,
-      "category": "Brewed Coffee",
+      "category": "Brewed-Coffee",
       "slug": "brewed-coffee"
     },
     {
       "id": 2,
-      "category": "Iced Coffee",
+      "category": "Iced-Coffee",
       "slug": "iced-coffee"
     },
     {
       "id": 3,
-      "category": "Dessert Coffee",
+      "category": "Dessert-Coffee",
       "slug": "dessert-coffee"
     }
   ]
