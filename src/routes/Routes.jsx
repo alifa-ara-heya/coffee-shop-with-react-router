@@ -9,10 +9,12 @@ const routes = createBrowserRouter([
     {
       path: "/",
       element: <MainLayouts></MainLayouts>,
+      errorElement: <p>Error</p>,
       children: [
         {
           path: '/', //or, index: true,
-          element: <Home></Home>
+          element: <Home></Home>,
+          loader: ()=> fetch('./categories.json')
         },
         {
           path: '/coffees',

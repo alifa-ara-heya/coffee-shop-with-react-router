@@ -1,25 +1,24 @@
+import { useLoaderData } from "react-router-dom";
+import Banner from "../components/Banner";
+import Heading from "../components/Heading";
+import Categories from "../components/Categories";
 
 const Home = () => {
+    const categories = useLoaderData()
     return (
         <div>
             {/* banner */}
-            <div className="hero bg-base-200 min-h-screen">
-                <div className="hero-content text-center">
-                    <div className="max-w-md">
-                        <h1 className="text-5xl font-bold">Hello there</h1>
-                        <p className="py-6">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
-                        </p>
-                        <button className="btn btn-primary">Get Started</button>
-                    </div>
-                </div>
-            </div>
+            <Banner />
 
             {/* heading */}
+            <Heading
+                title='Browse Coffees by Category'
+                subtitle='Choose your desired coffee category to browse through specific coffees that fit in your taste.'
+            />
 
             {/* categories tab section */}
-
+            <Categories categories={categories}/>
+        
             {/* dynamic nested component */}
         </div>
     );
